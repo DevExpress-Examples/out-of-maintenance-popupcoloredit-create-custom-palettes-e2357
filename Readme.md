@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/DXEditors_PopupColorEdit/MainWindow.xaml)
+* [MainWindow.xaml.cs](./CS/DXEditors_PopupColorEdit/MainWindow.xaml.cs)
+<!-- default file list end -->
 # PopupColorEdit - Create Custom Palettes
 
 
