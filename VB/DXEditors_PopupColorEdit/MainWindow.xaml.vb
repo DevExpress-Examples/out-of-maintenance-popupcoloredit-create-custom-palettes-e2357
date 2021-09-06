@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -20,6 +19,7 @@ Namespace DXEditors_PopupColorEdit
 	''' </summary>
 	Partial Public Class MainWindow
 		Inherits Window
+
 		Public Sub New()
 			InitializeComponent()
 			' Removes the 'Standard Colors' palette.
@@ -27,12 +27,7 @@ Namespace DXEditors_PopupColorEdit
 			' Adds a custom gradient palette.
 			popupColorEdit1.Palettes.Add(CustomPalette.CreateGradientPalette("Apex Colors", PredefinedColorCollections.Apex))
 			' Adds a new palette with three custom RGB colors.
-            Dim customColors As List(Of Color) = New List(Of Color)
-            customColors.Add(Color.FromRgb(150, 18, 30))
-            customColors.Add(Color.FromRgb(20, 40, 20))
-            customColors.Add(Color.FromRgb(88, 73, 29))
-			Dim palette As CustomPalette = New CustomPalette("Custom RGB Colors", customColors)
-            popupColorEdit1.Palettes.Add(palette)
+			popupColorEdit1.Palettes.Add(New CustomPalette("Custom RGB Colors", New List(Of Color)() From {Color.FromRgb(150, 18, 30), Color.FromRgb(20, 40, 20), Color.FromRgb(88, 73, 29)}))
 		End Sub
 	End Class
 End Namespace
